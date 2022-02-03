@@ -1,2 +1,32 @@
 <h1>Admin &raquo; Dashboard</h1>
-<p class="well">There are <a href="/admin/products" class="link"><%= @products %> products in <%= @categories %> categories</a> on the website.
+<section class="well">
+ <div class="panel panel-default categories">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th></th>
+          <th class="text-center">Count</th>
+        </tr>
+      </thead>
+      <tbody class=text-center>
+        <tr>
+          <td>
+            <h4>Categories</h4>
+          </td>
+          <td>
+            <h4><%= @categories %></h4>
+          </td>
+        </tr>
+        <tr>  
+          <td>
+            <h4>Products</h4>    
+          </td>
+          <td>
+            <h4><%= @products %></h4>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size: medium">Click <a href="/admin/products" class="link">Here for more details</a>.</p>
+</section>
