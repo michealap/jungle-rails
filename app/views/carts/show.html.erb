@@ -1,3 +1,10 @@
+<%if cart.size == 0%>
+<section class="warning">
+  <h2 class="alert alert-warning" role="alert"> Cart is empty. Go back to
+  <%= link_to 'Home', :root, class:"alert-link"%> to continue shopping
+  </h2>
+</section>
+<% else %>
 <section class="cart-show">
 
   <header class="page-header">
@@ -25,7 +32,7 @@
             TOTAL:
           </th>
           <th>
-            <%= cart_subtotal_cents / 100.0 %>
+            <%= humanized_money_with_symbol cart_subtotal_cents / 100.0 %>
           </th>
         </tr>
       </tfoot>
@@ -38,7 +45,7 @@
         <script
           src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-amount="<%= cart_subtotal_cents %>"
+          data-amount="<%= humanized_money_with_symbol cart_subtotal_cents %>"
           data-name="Jungle"
           data-description="Khurram Virani's Jungle Order"
           data-locale="auto"
@@ -50,3 +57,4 @@
   </div>
 
 </section>
+<% end %>
