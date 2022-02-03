@@ -20,4 +20,12 @@
   <aside class="price">
     <%= humanized_money_with_symbol product.price %>
   </aside>
+  <% if product.quantity == 0 %>
+    <aside class="sold_out">SOLD OUT!</aside>
+    <footer class="actions">
+    <%= link_to product, class: 'btn btn-default pull-right' do %>
+      Details &raquo;
+    <% end %>
+  </footer>
+  <%end%>
 </article>
