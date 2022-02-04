@@ -1,7 +1,20 @@
 class UsersController < ApplicationController
 
   def new
-    render 'new'
+    # render 'new'
+  end
+
+  def create
+    user = User.new(user_params)
+    if user.save
+      session[:user_id] = user.id
+      # puts user.id
+      # puts user.first_name
+      redirect_to [:root], notice: 'Account created successfully'
+    else
+      flash[:error] = 'An error occured!'
+      redirect_to '/signup'
+    end
   end
 
   private
