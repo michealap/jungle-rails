@@ -43,10 +43,14 @@
           </ul>
         </li>
 
-        
-        <!--<li><%= link_to "Logout", '/logout' %></li> %>-->
-        <li><%= link_to 'Login', '/login' %></li>
-        <li><%= link_to 'Signup', '/signup' %></li>  
+        <% if current_user %>
+          <li><a>Signed in as <%= current_user.first_name %></a></li>
+          <li><%= link_to "Logout", '/logout' %></li>
+        <% else %>
+          <li><%= link_to 'Login', '/login' %></li>
+          <li><%= link_to 'Signup', '/signup' %>
+          </li>  
+        <% end %>
 
         <li>
           <%= link_to cart_path do %>
