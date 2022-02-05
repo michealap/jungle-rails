@@ -27,5 +27,5 @@ class Admin::CategoriesController < ApplicationController
       :created_at
     )
   end
-
+  
 end
