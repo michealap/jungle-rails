@@ -6,6 +6,7 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 ### Sold Out Badge
 - When a product has 0 quantity, a sold out badge should be displayed on the product list page
+- ![Sold Out Badge](https://github.com/michealap/jungle-rails/blob/master/docs/sold-out.PNG?raw=true)
 
 ### Admin Categories
 - Admins can list and create new categories
@@ -15,6 +16,7 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 - As a Visitor, go to the registration page from any page in order to create an account
 - As a Visitor, sign up for a user account with my e-mail, password, first name and last name
 - As a Visitor, sign in using my e-mail and password
+![Login](https://github.com/michealap/jungle-rails/blob/master/docs/login_form.png?raw=true)
 - As a User, log out from any page
 - As a User, sign up with an existing e-mail address (uniqueness validation)
 - Passwords are stored using  has_secure_password in the User model, leveraging the bcrypt gem
@@ -23,6 +25,7 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 - The order page contains items, their image, name, description, quantities and line item totals
 - Display the final amount for the order
 - Display the email used to place the order
+![Order Details](https://github.com/michealap/jungle-rails/blob/master/docs/order-details.png?raw=true)
 
 ### Bug: Missing Admin Security
 - User must enter HTTP auth login/password to access admin functionality
